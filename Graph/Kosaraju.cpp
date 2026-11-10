@@ -48,6 +48,7 @@ void solve() {
     }
   }
   vis.assign(n + 1, false);
+  reverse(order.begin(), order.end());
   int scc_count = 0;
   for (int u : order) {
     if (!vis[u]) {
