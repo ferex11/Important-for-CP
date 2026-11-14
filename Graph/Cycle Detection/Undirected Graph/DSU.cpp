@@ -25,7 +25,7 @@ public:
     }
     return parent[u] = find(parent[u]);
   }
-  void union_sets(int u, int v) {
+  void unite(int u, int v) {
     u = find(u);
     v = find(v);
     if (u == v) {
@@ -49,7 +49,7 @@ void solve() {
       cout << "Yes" << endl;
       return;
     }
-    dsu.union_sets(u, v);
+    dsu.unite(u, v);
   }
   cout << "No" << endl;
 }
